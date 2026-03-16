@@ -1,0 +1,201 @@
+
+        /* ================= ตกแต่ง Scrollbar ให้เข้าธีม ================= */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0d0d0d; }
+        ::-webkit-scrollbar-thumb { background: #E50914; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff4b4b; }
+
+        /* คุมโทนทั้งเว็บด้วย ธีมมืดสไตล์โรงหนัง */
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #0d0d0d; 
+            color: #f5f5f5; 
+        }
+
+        /* ================= Navbar & Animation ================= */
+        .navbar {
+            background-color: rgba(10, 10, 10, 0.95) !important;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #E50914; 
+        }
+        .text-spu { color: #ffffff; }
+        .text-sit { color: #E50914; text-shadow: 0 0 15px rgba(229,9,20,0.8); } 
+        
+        /* ลูกเล่นขีดเส้นใต้เมนูเวลา Hover */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #E50914;
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after { width: 80%; }
+        .nav-link:hover { color: #E50914 !important; }
+
+        /* ================= Banner & Bouncing Arrow ================= */
+        .hero-banner {
+            background-image: url('https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(13,13,13,1) 100%);
+        }
+        .hero-text {
+            position: relative;
+            color: #ffffff;
+            font-size: 4.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 15px rgba(0,0,0,1), -2px -2px 10px rgba(229,9,20,0.5);
+            animation: fadeInDown 1.5s ease-out; /* แอนิเมชันข้อความหล่นลงมา */
+        }
+
+        /* ลูกศรชี้ลง เด้งดึ๋งๆ */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.7);
+            font-size: 2.5rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+            40% { transform: translateY(-20px) translateX(-50%); }
+            60% { transform: translateY(-10px) translateX(-50%); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ================= หัวข้อ Section ================= */
+        .section-title {
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            border-left: 6px solid #E50914;
+            padding-left: 15px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.2);
+        }
+
+        /* ================= การ์ดภาพยนตร์ & Badges ================= */
+        .movie-card {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease-in-out;
+        }
+        .movie-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(229, 9, 20, 0.4);
+            border-color: #E50914;
+        }
+        
+        .img-container {
+            position: relative;
+            overflow: hidden;
+        }
+        .movie-img {
+            height: 450px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.6s ease;
+        }
+        
+        /* ป้ายกำกับบนการ์ด */
+        .badge-top-left {
+            position: absolute; top: 15px; left: 15px; z-index: 2;
+            background: #E50914; color: white; padding: 5px 12px;
+            border-radius: 5px; font-weight: bold; font-size: 0.8rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+        .badge-top-right {
+            position: absolute; top: 15px; right: 15px; z-index: 2;
+            background: rgba(0,0,0,0.7); color: #FFD700; padding: 5px 10px;
+            border-radius: 5px; font-weight: bold; font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* ไอคอน Play ที่จะแสดงตอน Hover */
+        .play-overlay {
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6); display: flex;
+            align-items: center; justify-content: center;
+            opacity: 0; transition: all 0.4s ease;
+        }
+        .play-icon {
+            font-size: 4.5rem; color: white;
+            transition: all 0.3s ease; transform: scale(0.5);
+        }
+        .movie-card:hover .movie-img { transform: scale(1.1); }
+        .movie-card:hover .play-overlay { opacity: 1; }
+        .movie-card:hover .play-icon { transform: scale(1); color: #E50914; }
+
+        /* ปุ่ม Custom สีแดงไล่เฉด */
+        .btn-custom {
+            background: linear-gradient(45deg, #E50914, #ff4b4b);
+            border: none; color: white; font-weight: 600;
+            letter-spacing: 1px; border-radius: 8px; transition: all 0.3s ease;
+        }
+        .btn-custom:hover {
+            background: linear-gradient(45deg, #ff4b4b, #ff7b7b);
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.8);
+            transform: translateY(-3px); color: white;
+        }
+
+        /* ================= Modal ================= */
+        .modal-content {
+            background-color: #1a1a1a; color: #f5f5f5;
+            border: 2px solid #E50914; border-radius: 15px;
+            box-shadow: 0 0 30px rgba(229,9,20,0.4);
+        }
+
+        /* ================= ฟอร์มติดต่อแบบ Floating ================= */
+        .form-floating > .form-control,
+        .form-floating > .form-control-plaintext {
+            padding: 1rem 0.75rem;
+        }
+        .form-floating > .form-control,
+        .form-floating > .form-control:focus,
+        .form-floating > textarea.form-control {
+            background-color: #222; border: 1px solid #444; color: #fff; border-radius: 10px;
+        }
+        .form-floating > .form-control:focus {
+            border-color: #E50914; box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25);
+        }
+        /* แก้สีข้อความ Floating Label */
+        .form-floating > label { color: #888; font-weight: 500; }
+        .form-floating > .form-control:focus ~ label,
+        .form-floating > .form-control:not(:placeholder-shown) ~ label {
+            color: #E50914; /* ตัวหนังสือลอยขึ้นไปเป็นสีแดง */
+        }
+
+        /* Footer */
+        .social-icon { color: #aaa; transition: all 0.3s ease; }
+        .social-icon:hover {
+            color: #E50914; text-shadow: 0 0 15px rgba(229,9,20,1);
+            transform: translateY(-8px) scale(1.1);
+        }

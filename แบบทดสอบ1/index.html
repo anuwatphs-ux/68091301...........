@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPU Movie - การพัฒนาเว็บไซต์ภาพยนต์</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="#">
+                <span class="text-spu">ANUWAT</span><span class="text-sit"> MOVIE</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fs-5 fw-medium">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">ภาพยนตร์</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#movies">ล้วงลับเวทีลวง</a></li>
+                            <li><a class="dropdown-item" href="#movies">เซลล์ขยันพันธุ์เดือด</a></li>
+                            <li><a class="dropdown-item" href="#movies">Gundam Seed Freedom Special Edition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#about">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link text-white mx-2" href="#contact">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-banner">
+        <div class="text-center">
+            <h1 class="hero-text px-3">สัมผัสโลกของภาพยนตร์สุดมันส์</h1>
+        </div>
+        <a href="#movies" class="scroll-indicator"><i class="bi bi-chevron-double-down"></i></a>
+    </header>
+
+    <section id="movies" class="container my-5 py-5">
+        <div class="mb-5 d-flex justify-content-between align-items-end">
+            <h2 class="section-title fs-2 m-0">โปรแกรมหนังอัปเดต</h2>
+        </div>
+        
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="card movie-card h-100">
+                    <div class="img-container">
+                        <div class="badge-top-left">4K Ultra HD</div>
+                        <div class="badge-top-right"><i class="bi bi-star-fill"></i> 8.5</div>
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top movie-img" alt="ล้วงลับเวทีลวง">
+                        <div class="play-overlay"><i class="bi bi-play-circle-fill play-icon"></i></div>
+                    </div>
+                    <div class="card-body text-center d-flex flex-column p-4">
+                        <h4 class="card-title fw-bold text-white mb-3">ล้วงลับเวทีลวง</h4>
+                        <button class="btn btn-custom mt-auto py-2 fs-5" data-bs-toggle="modal" data-bs-target="#movieModal1">ดูรายละเอียด</button> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card movie-card h-100">
+                    <div class="img-container">
+                        <div class="badge-top-left">NEW</div>
+                        <div class="badge-top-right"><i class="bi bi-star-fill"></i> 9.0</div>
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top movie-img" alt="เซลล์ขยันพันธุ์เดือด">
+                        <div class="play-overlay"><i class="bi bi-play-circle-fill play-icon"></i></div>
+                    </div>
+                    <div class="card-body text-center d-flex flex-column p-4">
+                        <h4 class="card-title fw-bold text-white mb-3">เซลล์ขยันพันธุ์เดือด</h4>
+                        <button class="btn btn-custom mt-auto py-2 fs-5" data-bs-toggle="modal" data-bs-target="#movieModal2">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card movie-card h-100">
+                    <div class="img-container">
+                        <div class="badge-top-left">Trending 🔥</div>
+                        <div class="badge-top-right"><i class="bi bi-star-fill"></i> 9.5</div>
+                        <img src="https://us.oricon-group.com/upimg/detail/1000/1885/img660/3432bfd6a697872a96871affb54162ff.jpg" class="card-img-top movie-img" alt="Gundam Seed Freedom">
+                        <div class="play-overlay"><i class="bi bi-play-circle-fill play-icon"></i></div>
+                    </div>
+                    <div class="card-body text-center d-flex flex-column p-4">
+                        <h4 class="card-title fw-bold text-white mb-3">Gundam Seed Freedom<br>Special Edition</h4>
+                        <button class="btn btn-custom mt-auto py-2 fs-5" data-bs-toggle="modal" data-bs-target="#movieModal3">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="modal fade" id="movieModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0 pb-0 mt-2 px-4">
+                    <h4 class="modal-title fw-bold text-white">ล้วงลับเวทีลวง (Trap)</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row align-items-center p-4">
+                    <div class="col-md-5 text-center mb-4 mb-md-0">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow-lg" alt="Poster">
+                    </div>
+                    <div class="col-md-7 px-4">
+                        <div class="p-3 rounded-3 mb-3" style="background-color: #222;">
+                            <p class="fs-5 mb-2"><strong class="text-danger">ผู้กำกับ:</strong> <span class="text-white">เอ็ม. ไนท์ ชยามาลาน</span></p>
+                            <p class="fs-5 mb-0"><strong class="text-danger">นักแสดงนำ:</strong> <span class="text-white">จอช ฮาร์ทเน็ตต์, แอเรียล โดโนฮิว</span></p>
+                        </div>
+                        <h5 class="text-danger fw-bold mt-4">เนื้อเรื่องย่อ</h5>
+                        <p class="text-light" style="line-height: 1.8; font-size: 1.1rem;">
+                            เรื่องราวของคุณพ่อที่พาลูกสาววัยรุ่นไปดูคอนเสิร์ตป็อปสตาร์คนโปรด แต่เหตุการณ์กลับพลิกผันเมื่อเขาค้นพบว่างานคอนเสิร์ตครั้งนี้ คือกับดักขนาดใหญ่ที่ตำรวจวางไว้เพื่อจับกุมฆาตกรต่อเนื่อง... ซึ่งก็คือตัวเขาเอง!
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 pe-4 pb-4">
+                    <button type="button" class="btn btn-outline-light px-5 py-2 fs-5 rounded-pill" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="movieModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0 pb-0 mt-2 px-4">
+                    <h4 class="modal-title fw-bold text-white">เซลล์ขยันพันธุ์เดือด (Cells at Work)</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row align-items-center p-4">
+                    <div class="col-md-5 text-center mb-4 mb-md-0">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="img-fluid rounded-4 shadow-lg" alt="Poster">
+                    </div>
+                    <div class="col-md-7 px-4">
+                        <div class="p-3 rounded-3 mb-3" style="background-color: #222;">
+                            <p class="fs-5 mb-2"><strong class="text-danger">ผู้กำกับ:</strong> <span class="text-white">เคนิจิ ซูซูกิ</span></p>
+                            <p class="fs-5 mb-0"><strong class="text-danger">นักแสดงนำ:</strong> <span class="text-white">คานะ ฮานาซาวะ, โทโมอากิ มาเอโนะ</span></p>
+                        </div>
+                        <h5 class="text-danger fw-bold mt-4">เนื้อเรื่องย่อ</h5>
+                        <p class="text-light" style="line-height: 1.8; font-size: 1.1rem;">
+                            แอนิเมชันสุดน่ารักที่จะพาคุณไปทำความรู้จักกับการทำงานของเซลล์ต่างๆ ในร่างกายมนุษย์ นำทีมโดยเม็ดเลือดแดงสุดเปิ่นที่มักจะหลงทาง และเม็ดเลือดขาวสุดขรึม ที่ต้องร่วมมือกันต่อสู้กับเชื้อโรคเพื่อปกป้องร่างกายในแต่ละวัน
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 pe-4 pb-4">
+                    <button type="button" class="btn btn-outline-light px-5 py-2 fs-5 rounded-pill" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="movieModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0 pb-0 mt-2 px-4">
+                    <h4 class="modal-title fw-bold text-white">Gundam Seed Freedom Special Edition</h4>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body row align-items-center p-4">
+                    <div class="col-md-5 text-center mb-4 mb-md-0">
+                        <img src="https://us.oricon-group.com/upimg/detail/1000/1885/img660/3432bfd6a697872a96871affb54162ff.jpg" class="img-fluid rounded-4 shadow-lg" alt="Poster">
+                    </div>
+                    <div class="col-md-7 px-4">
+                        <div class="p-3 rounded-3 mb-3" style="background-color: #222;">
+                            <p class="fs-5 mb-2"><strong class="text-danger">ผู้กำกับ:</strong> <span class="text-white">มิตซึโอะ ฟุคุดะ</span></p>
+                            <p class="fs-5 mb-0"><strong class="text-danger">นักแสดงนำ:</strong> <span class="text-white">โซอิจิโร่ โฮชิ, ริเอะ ทานากะ</span></p>
+                        </div>
+                        <h5 class="text-danger fw-bold mt-4">เนื้อเรื่องย่อ</h5>
+                        <p class="text-light" style="line-height: 1.8; font-size: 1.1rem;">
+                            ภาคต่อที่แฟนๆ รอคอยมานานของซีรีส์กันดั้ม ซี้ด เรื่องราวของ คิระ ยามาโตะ ลักซ์ ไคลน์ และพรรคพวก ที่ต้องกลับมาเผชิญหน้ากับความขัดแย้งครั้งใหม่ในยุคที่สันติภาพของจักรวาลยังคงเปราะบาง
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 pt-0 pe-4 pb-4">
+                    <button type="button" class="btn btn-outline-light px-5 py-2 fs-5 rounded-pill" data-bs-dismiss="modal">ปิดหน้าต่าง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-5" style="background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%);">
+        <div class="container text-center py-5">
+            <h2 class="fw-bold mb-4 fs-1"><span class="text-danger">เกี่ยวกับ</span><span class="text-white">เรา</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="fs-4" style="color: #dcdcdc; line-height: 1.8;">
+                        ยินดีต้อนรับเข้าสู่เว็บไซต์ <strong class="text-white fs-3">Anuwat Movie</strong> <br>แหล่งรวมความบันเทิงและข้อมูลภาพยนตร์สุดมันส์ 
+                        เราตั้งใจสร้างสรรค์แพลตฟอร์มนี้เพื่อคนรักหนัง ให้คุณไม่พลาดทุกโปรแกรมเด็ดและการอัปเดตล่าสุดจากทั่วโลก!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container my-5 py-5">
+        <h2 class="section-title fs-2 mb-5 d-inline-block">ติดต่อเรา</h2>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8 col-lg-7">
+                <form class="p-5 border-0 rounded-4 shadow-lg" style="background-color: #151515; border-top: 5px solid #E50914 !important;">
+                    
+                    <div class="form-floating mb-4">
+                        <input type="text" class="form-control form-control-lg" id="inputName" placeholder="ชื่อ-นามสกุลของคุณ" required>
+                        <label for="inputName">ชื่อ-นามสกุล</label>
+                    </div>
+                    
+                    <div class="form-floating mb-4">
+                        <input type="email" class="form-control form-control-lg" id="inputEmail" placeholder="example@email.com" required>
+                        <label for="inputEmail">อีเมล</label>
+                    </div>
+                    
+                    <div class="form-floating mb-4">
+                        <textarea class="form-control form-control-lg" id="inputText" placeholder="พิมพ์ข้อความที่ต้องการติดต่อ..." style="height: 150px" required></textarea>
+                        <label for="inputText">ข้อความ</label>
+                    </div>
+
+                    <div class="text-center mt-5">
+                        <button type="submit" class="btn btn-custom w-100 py-3 fs-4 rounded-pill">ส่งข้อความ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-5" style="background-color: #050505; border-top: 2px solid #222;">
+        <div class="container mt-3">
+            <div class="mb-4 d-flex justify-content-center gap-4">
+    <a href="https://www.facebook.com/share/1AmjXnaU2e/?mibextid=wwXIfr" class="social-icon fs-2" title="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+    
+    <a href="https://www.instagram.com/pxnd_anw?igsh=OHYzcTg4dHRuem95&utm_source=qr" class="social-icon fs-2" title="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+
+    <a href="https://line.me/ti/p/gWKKbQXeah" class="social-icon fs-2" title="LINE" target="_blank"><i class="bi bi-line"></i></a>
+</div>
+            <p class="mb-0 text-muted fs-5">&copy; 2025 SPU Movie By <span class="text-danger fw-bold">[68091301]</span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
